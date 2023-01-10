@@ -13,10 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.13.0
-      - name: Get Deps
-        run: npm install
-      - name: Fetch Data
-        run: npm run fetch
       - name: Update S3 objects
         uses: jakejarvis/s3-sync-action@master
         with:
